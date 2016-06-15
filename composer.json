@@ -1,5 +1,5 @@
 {
-    "name": "iamota/plugin.wp.w3-total-cache",
+    "name": "iamota/w3-total-cache",
     "description": "Mirror of W3 Total Cache with fix for /wp folder",
     "type": "wordpress-plugin",
     "require": {
