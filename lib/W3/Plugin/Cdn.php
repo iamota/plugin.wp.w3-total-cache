@@ -307,7 +307,7 @@ class W3_Plugin_Cdn extends W3_Plugin {
                             }
                         }
 
-                        $regexps[] = '~(["\'(])\s*((' . $domain_url_regexp . ')?(' . w3_preg_quote($site_path) . '(' . implode('|', $mask_regexps) . ')))~i';
+                        $regexps[] = '~(["\'(])\s*((' . $domain_url_regexp . ')?(' . w3_preg_quote('/') . '(' . implode('|', $mask_regexps) . ')))~i';
                         if ($site_domain_url_regexp)
                             $regexps[] = '~(["\'(])\s*((' . $site_domain_url_regexp . ')?(' . w3_preg_quote($site_path) . '(' . implode('|', $mask_regexps) . ')))~i';
                     }
@@ -372,7 +372,7 @@ class W3_Plugin_Cdn extends W3_Plugin {
             ')';
         return $regexp;
     }
-    
+
     /**
      * Returns array of files to upload
      *
