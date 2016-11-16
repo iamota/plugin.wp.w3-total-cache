@@ -1008,7 +1008,7 @@ class _Cdn_Plugin_ContentFilter {
 				}
 
 				$regexps[] = '~(["\'(=])\s*((' . $domain_url_regexp .
-					')?(' . Util_Environment::preg_quote( $site_path ) .
+					')?(' . Util_Environment::preg_quote( '/' ) .
 					'(' . implode( '|', $mask_regexps ) . ')([^"\'() >]*)))~i';
 				if ( $site_domain_url_regexp )
 					$regexps[] = '~(["\'(=])\s*((' .
